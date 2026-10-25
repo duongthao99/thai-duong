@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THƯ VIỆN HÌNH ẢNH THÁI DƯƠNG — Triển Lãm Nghệ Thuật Trí Tuệ Nhân Tạo Quốc Tế</title>
+    <meta name="description" content="Thư Viện Hình Ảnh Thái Dương thuộc thương hiệu THÁI DƯƠNG — Không gian triển lãm, lưu trữ đám mây và sáng tạo nghệ thuật thị giác bằng Trí Tuệ Nhân Tạo (AI Art Gallery & Cloud Archive).">
+    <meta name="keywords" content="Thái Dương, Thư viện hình ảnh Thái Dương, AI Art Vietnam, Nghệ thuật AI, Chân dung nghệ thuật, Tranh màu nước AI, Phục chế ảnh, Thiết kế Poster, Khóa học AI">
+    <meta name="author" content="THÁI DƯƠNG">
+    <meta property="og:title" content="THƯ VIỆN HÌNH ẢNH THÁI DƯƠNG — Triển Lãm Nghệ Thuật AI Quốc Tế">
+    <meta property="og:description" content="Không gian lưu trữ, quản lý, trưng bày và giới thiệu những tác phẩm nghệ thuật thị giác sáng tạo bằng trí tuệ nhân tạo thuộc thương hiệu THÁI DƯƠNG.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+    <!-- JSON-LD Schema.org VisualArtwork & ArtGallery SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ArtGallery",
+      "name": "THƯ VIỆN HÌNH ẢNH THÁI DƯƠNG",
+      "brand": "THÁI DƯƠNG",
+      "description": "Không gian lưu trữ, quản lý, trưng bày và giới thiệu những tác phẩm nghệ thuật sáng tạo bằng trí tuệ nhân tạo thuộc thương hiệu THÁI DƯƠNG.",
+      "founder": {
+        "@type": "Person",
+        "name": "Nghệ Sĩ Thị Giác AI Thái Dương"
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="min-h-screen flex flex-col selection:bg-amber-500/30 selection:text-amber-200">
+
+    <!-- TOP ANNOUNCEMENT & CLOUD STATUS BAR -->
+    <div class="w-full bg-gradient-to-r from-amber-950/50 via-stone-900 to-amber-950/50 border-b gold-border px-4 py-1.5 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span class="font-medium tracking-wide text-amber-200/90">THƯƠNG HIỆU THÁI DƯƠNG — KHÔNG GIAN TRIỂN LÃM & LƯU TRỮ NGHỆ THUẬT AI QUỐC TẾ</span>
+            </div>
+            <div class="flex items-center gap-4 ml-auto">
+                <button id="btnCloudStatusTrigger" type="button" class="flex items-center gap-1.5 text-amber-300 hover:text-amber-200 transition underline-offset-4 hover:underline">
+                    <i data-lucide="cloud" class="w-3.5 h-3.5"></i>
+                    <span id="cloudStatusBadgeText">Lưu trữ: Cloud CDN + GitHub JSON (Sẵn sàng)</span>
+                </button>
+                <button id="btnThemeToggle" type="button" class="flex items-center gap-1 px-2 py-0.5 rounded border gold-border hover:bg-amber-500/10 transition" title="Chuyển chế độ Ánh sáng Phòng trưng bày">
+                    <i data-lucide="sun-moon" class="w-3.5 h-3.5 text-amber-400"></i>
+                    <span id="themeToggleLabel">Sảnh Tối (Obsidian)</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION HEADER -->
+    <header class="sticky top-0 z-40 glass-panel border-b gold-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+            <!-- Brand Identity -->
+            <a href="#heroSection" data-nav="public" class="flex items-center gap-3.5 group focus:outline-none">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-800 p-0.5 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition">
+                    <div class="w-full h-full rounded-full bg-stone-950 flex items-center justify-center">
+                        <i data-lucide="sun" class="w-5 h-5 text-amber-400"></i>
+                    </div>
+                </div>
+                <div>
+                    <span class="block text-[10px] uppercase tracking-[0.3em] text-amber-400/90 font-semibold">THƯƠNG HIỆU THÁI DƯƠNG</span>
+                    <h1 class="font-serif-art text-xl sm:text-2xl font-bold tracking-wider gold-gradient-text leading-tight">
+                        THƯ VIỆN HÌNH ẢNH THÁI DƯƠNG
+                    </h1>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-1 xl:gap-2 text-sm font-medium">
+                <button type="button" data-view-target="public" data-scroll-to="heroSection" class="nav-link px-3 py-2 rounded-lg hover:text-amber-400 hover:bg-amber-500/10 transition">Trang Chủ</button>
+                <button type="button" data-view-target="public" data-scroll-to="featuredSection" class="nav-link px-3 py-2 rounded-lg hover:text-amber-400 hover:bg-amber-500/10 transition">Tiêu Biểu</button>
+                <button type="button" data-view-target="public" data-scroll-to="gallerySection" class="nav-link px-3 py-2 rounded-lg hover:text-amber-400 hover:bg-amber-500/10 transition">Triển Lãm Ảnh</button>
+                <button type="button" data-view-target="public" data-scroll-to="servicesSection" class="nav-link px-3 py-2 rounded-lg hover:text-amber-400 hover:bg-amber-500/10 transition">Dịch Vụ & Khóa Học AI</button>
+                <button type="button" data-view-target="public" data-scroll-to="authorSection" class="nav-link px-3 py-2 rounded-lg hover:text-amber-400 hover:bg-amber-500/10 transition">Tác Giả & Liên Hệ</button>
+                <button type="button" data-view-target="architecture" class="nav-link px-3 py-2 rounded-lg text-amber-300 hover:text-amber-200 hover:bg-amber-500/10 transition flex items-center gap-1.5">
+                    <i data-lucide="layers" class="w-4 h-4"></i>
+                    <span>Kiến Trúc & Hướng Dẫn</span>
+                </button>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center gap-2.5">
+                <button id="btnOpenQuickUpload" type="button" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border border-amber-500/40 bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 text-xs sm:text-sm font-medium transition">
+                    <i data-lucide="upload-cloud" class="w-4 h-4"></i>
+                    <span>Thêm Ảnh Mới</span>
+                </button>
+
+                <button id="btnSwitchAdmin" type="button" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-stone-950 font-semibold text-xs sm:text-sm shadow-md shadow-amber-500/20 transition">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i>
+                    <span id="adminBtnLabel">Quản Trị Viên</span>
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button id="btnMobileMenu" type="button" class="lg:hidden p-2 rounded-lg border gold-border hover:bg-amber-500/10 transition" aria-label="Mở menu">
+                    <i data-lucide="menu" class="w-5 h-5 text-amber-400"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Navigation -->
+        <div id="mobileNavDrawer" class="hidden lg:hidden border-t gold-border px-4 pt-3 pb-5 space-y-2 bg-stone-950/95">
+            <div class="grid grid-cols-2 gap-2">
+                <button type="button" data-view-target="public" data-scroll-to="heroSection" class="mobile-nav-btn text-left px-3 py-2 rounded-lg hover:bg-amber-500/10 text-sm">Trang Chủ</button>
+                <button type="button" data-view-target="public" data-scroll-to="featuredSection" class="mobile-nav-btn text-left px-3 py-2 rounded-lg hover:bg-amber-500/10 text-sm">Tác Phẩm Tiêu Biểu</button>
+                <button type="button" data-view-target="public" data-scroll-to="gallerySection" class="mobile-nav-btn text-left px-3 py-2 rounded-lg hover:bg-amber-500/10 text-sm">Phòng Triển Lãm</button>
+                <button type="button" data-view-target="public" data-scroll-to="servicesSection" class="mobile-nav-btn text-left px-3 py-2 rounded-lg hover:bg-amber-500/10 text-sm">Dịch Vụ & Khóa Học AI</button>
+                <button type="button" data-view-target="public" data-scroll-to="authorSection" class="mobile-nav-btn text-left px-3 py-2 rounded-lg hover:bg-amber-500/10 text-sm">Giới Thiệu & Liên Hệ</button>
+                <button type="button" data-view-target="architecture" class="mobile-nav-btn text-left px-3 py-2 rounded-lg hover:bg-amber-500/10 text-sm text-amber-300 font-medium">Kiến Trúc & Hướng Dẫn</button>
+            </div>
+            <div class="pt-2 border-t gold-border flex gap-2">
+                <button id="btnMobileQuickUpload" type="button" class="w-full py-2 rounded-lg border border-amber-500/40 bg-amber-500/10 text-amber-300 text-xs font-medium flex items-center justify-center gap-1.5">
+                    <i data-lucide="upload-cloud" class="w-4 h-4"></i> Thêm Ảnh Mới Nhanh
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         VIEW 1: PUBLIC EXHIBITION & GALLERY VIEW
+         ========================================== -->
+    <main id="viewPublic" class="flex-grow">
+
+        <!-- 1. HERO EXHIBITION BANNER -->
+        <section id="heroSection" class="relative min-h-[82vh] flex items-center overflow-hidden border-b gold-border">
+            <!-- Hero Background Artwork -->
+            <div class="absolute inset-0 z-0">
+                <img id="heroBannerImg" src="assets/images/hero-exhibition-thai-duong.jpg" alt="Không gian triển lãm nghệ thuật Thái Dương" class="w-full h-full object-cover object-center scale-105 transition-transform duration-1000">
+                <div class="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-950/80 to-stone-950/35"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-stone-950/50"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
+                <div class="max-w-3xl space-y-6">
+                    <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-amber-400/40 bg-stone-950/70 backdrop-blur-md">
+                        <span class="w-2 h-2 rounded-full bg-amber-400"></span>
+                        <span class="text-xs uppercase tracking-[0.25em] text-amber-300 font-semibold">THƯƠNG HIỆU THÁI DƯƠNG • AI FINE ART ARCHIVE</span>
+                    </div>
+
+                    <h2 class="font-serif-art text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.08] tracking-tight text-white">
+                        THƯ VIỆN HÌNH ẢNH <br>
+                        <span class="gold-gradient-text italic font-normal">THÁI DƯƠNG</span>
+                    </h2>
+
+                    <p class="text-base sm:text-lg text-stone-200/90 leading-relaxed max-w-2xl font-light">
+                        Chào mừng bạn đến với phòng triển lãm nghệ thuật thị giác quốc tế của <strong class="text-amber-300 font-medium">THÁI DƯƠNG</strong> — nơi giao thoa giữa cảm xúc hội họa truyền thống, mỹ học đương đại và sức mạnh sáng tạo của Trí Tuệ Nhân Tạo. Mỗi tác phẩm được lưu trữ nguyên bản độ phân giải cao, phân loại khoa học và trưng bày trong không gian chuẩn bảo tàng số.
+                    </p>
+
+                    <!-- Action CTAs -->
+                    <div class="flex flex-wrap items-center gap-4 pt-2">
+                        <button type="button" data-scroll-to="gallerySection" class="px-7 py-3.5 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-stone-950 font-semibold text-sm sm:text-base shadow-xl shadow-amber-500/25 hover:brightness-110 transition flex items-center gap-2.5">
+                            <i data-lucide="sparkles" class="w-5 h-5"></i>
+                            <span>Khám Phá Phòng Triển Lãm</span>
+                        </button>
+                        <button type="button" id="btnHeroStartSlideshow" class="px-6 py-3.5 rounded-xl border border-amber-300/40 bg-stone-950/60 hover:bg-amber-500/15 text-amber-200 font-medium text-sm sm:text-base backdrop-blur-md transition flex items-center gap-2">
+                            <i data-lucide="play-circle" class="w-5 h-5 text-amber-400"></i>
+                            <span>Trình Chiếu Triển Lãm 4K</span>
+                        </button>
+                        <button type="button" data-scroll-to="servicesSection" class="px-5 py-3.5 rounded-xl border border-stone-700 hover:border-amber-500/40 bg-stone-900/50 text-stone-200 text-sm transition flex items-center gap-2">
+                            <i data-lucide="wand-2" class="w-4 h-4 text-amber-400"></i>
+                            <span>Đặt Hàng Thiết Kế & Khóa Học AI</span>
+                        </button>
+                    </div>
+
+                    <!-- Live Exhibition Counters -->
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-8 border-t border-amber-500/20 max-w-2xl">
+                        <div>
+                            <div id="statTotalArtworks" class="font-serif-art text-3xl sm:text-4xl font-bold text-amber-400">9</div>
+                            <div class="text-xs text-stone-400 uppercase tracking-wider mt-0.5">Tác Phẩm Lưu Trữ</div>
+                        </div>
+                        <div>
+                            <div id="statTotalCategories" class="font-serif-art text-3xl sm:text-4xl font-bold text-amber-400">9</div>
+                            <div class="text-xs text-stone-400 uppercase tracking-wider mt-0.5">Chủ Đề Nghệ Thuật</div>
+                        </div>
+                        <div>
+                            <div class="font-serif-art text-3xl sm:text-4xl font-bold text-amber-400">4 Tỷ Lệ</div>
+                            <div class="text-xs text-stone-400 uppercase tracking-wider mt-0.5">16:9 • 9:16 • 1:1 • 3:4</div>
+                        </div>
+                        <div>
+                            <div class="font-serif-art text-3xl sm:text-4xl font-bold text-emerald-400">Cloud</div>
+                            <div class="text-xs text-stone-400 uppercase tracking-wider mt-0.5">CDN Bền Vững 100%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. FEATURED MASTERPIECES SPOTLIGHT -->
+        <section id="featuredSection" class="py-16 lg:py-20 border-b gold-border relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.25em] text-amber-400 font-semibold">CURATOR'S SELECTION • BỘ SƯU TẬP ĐẶC BIỆT</span>
+                        <h3 class="font-serif-art text-3xl sm:text-4xl font-bold mt-1">Tác Phẩm Tiêu Biểu Của Thái Dương</h3>
+                    </div>
+                    <p class="text-sm text-stone-400 max-w-md">
+                        Những sáng tác AI được tuyển chọn kỹ lưỡng về bố cục ánh sáng, chiều sâu cảm xúc và độ chi tiết nguyên bản. Nhấn vào từng tác phẩm để thưởng lãm toàn màn hình.
+                    </p>
+                </div>
+
+                <!-- Dynamic Featured Spotlight Grid -->
+                <div id="featuredGridContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. MAIN ART GALLERY & COLLECTION FILTER SECTION -->
+        <section id="gallerySection" class="py-16 lg:py-24 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Gallery Header -->
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-6">
+                    <div>
+                        <span class="text-xs uppercase tracking-[0.25em] text-amber-400 font-semibold">EXHIBITION ARCHIVE • KHÔNG GIAN TRƯNG BÀY</span>
+                        <h3 class="font-serif-art text-3xl sm:text-5xl font-bold mt-1">Thư Viện Tác Phẩm Nghệ Thuật AI</h3>
+                    </div>
+
+                    <!-- Layout & Aspect Ratio Switchers -->
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="text-xs text-stone-400 mr-1">Chế độ xem:</span>
+                        <button type="button" data-layout-mode="masonry" class="layout-mode-btn px-3 py-1.5 rounded-lg border gold-border bg-amber-500/20 text-amber-300 text-xs font-medium flex items-center gap-1.5 transition">
+                            <i data-lucide="layout-dashboard" class="w-3.5 h-3.5"></i> Tự Động Đẹp Mắt (Masonry)
+                        </button>
+                        <button type="button" data-layout-mode="even" class="layout-mode-btn px-3 py-1.5 rounded-lg border gold-border hover:bg-amber-500/10 text-xs font-medium flex items-center gap-1.5 transition">
+                            <i data-lucide="grid" class="w-3.5 h-3.5"></i> Lưới Tiêu Chuẩn
+                        </button>
+                        <button type="button" data-layout-mode="collection" class="layout-mode-btn px-3 py-1.5 rounded-lg border gold-border hover:bg-amber-500/10 text-xs font-medium flex items-center gap-1.5 transition">
+                            <i data-lucide="folder-heart" class="w-3.5 h-3.5"></i> Theo Bộ Sưu Tập
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Search, Ratio Filter & Sort Toolbar -->
+                <div class="museum-card rounded-2xl p-4 sm:p-5 mb-8">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center">
+                        <!-- Search Input -->
+                        <div class="md:col-span-5 relative">
+                            <i data-lucide="search" class="w-4 h-4 text-amber-400 absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                            <input id="searchArtworkInput" type="text" placeholder="Tìm theo tên tác phẩm, mô tả, từ khóa (#sen, #aodai, #halong)..." class="w-full pl-10 pr-9 py-2.5 rounded-xl bg-stone-900/90 border gold-border text-sm text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400 transition">
+                            <button id="btnClearSearch" type="button" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-stone-400 hover:text-amber-400" title="Xóa tìm kiếm">
+                                <i data-lucide="x" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+
+                        <!-- Aspect Ratio Filter -->
+                        <div class="md:col-span-4 flex items-center gap-2">
+                            <label for="filterRatioSelect" class="text-xs text-stone-400 whitespace-nowrap">Khung hình:</label>
+                            <select id="filterRatioSelect" class="w-full px-3 py-2.5 rounded-xl bg-stone-900/90 border gold-border text-xs sm:text-sm text-stone-200 focus:outline-none focus:border-amber-400">
+                                <option value="all">Tất cả tỷ lệ (16:9, 9:16, 1:1, 3:4, 4:3)</option>
+                                <option value="16:9">Ảnh Ngang Điện Ảnh (16:9)</option>
+                                <option value="9:16">Ảnh Dọc Triển Lãm / Story (9:16)</option>
+                                <option value="1:1">Ảnh Vuông Nghệ Thuật (1:1)</option>
+                                <option value="3:4">Ảnh Chân Dung / Poster (3:4 & 4:3)</option>
+                            </select>
+                        </div>
+
+                        <!-- Sort Select -->
+                        <div class="md:col-span-3 flex items-center gap-2">
+                            <label for="sortArtworkSelect" class="text-xs text-stone-400 whitespace-nowrap">Sắp xếp:</label>
+                            <select id="sortArtworkSelect" class="w-full px-3 py-2.5 rounded-xl bg-stone-900/90 border gold-border text-xs sm:text-sm text-stone-200 focus:outline-none focus:border-amber-400">
+                                <option value="order">Thứ tự trưng bày</option>
+                                <option value="newest">Mới sáng tạo nhất</option>
+                                <option value="oldest">Cũ nhất trước</option>
+                                <option value="title">Tên tác phẩm (A → Z)</option>
+                                <option value="views">Lượt thưởng lãm cao</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Category Filter Pills (All 9 Requested Categories) -->
+                    <div id="categoryFilterBar" class="flex items-center gap-2 overflow-x-auto pt-4 mt-4 border-t gold-border pb-1">
+                        <!-- Populated dynamically via JS -->
+                    </div>
+                </div>
+
+                <!-- Active Filter Status & Quick Actions -->
+                <div class="flex flex-wrap items-center justify-between gap-2 mb-6 text-xs text-stone-400">
+                    <div id="galleryResultSummary">Đang hiển thị <strong class="text-amber-400">9</strong> tác phẩm nghệ thuật</div>
+                    <div class="flex items-center gap-3">
+                        <button id="btnResetAllFilters" type="button" class="text-amber-400 hover:underline hidden">Đặt lại bộ lọc</button>
+                        <button id="btnGalleryUploadTrigger" type="button" class="text-amber-300 hover:text-amber-200 flex items-center gap-1 font-medium">
+                            <i data-lucide="plus-circle" class="w-3.5 h-3.5"></i> Tải thêm tác phẩm mới vào thư viện
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Main Gallery Container -->
+                <div id="galleryContainer">
+                    <!-- Rendered dynamically via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. AI ART SERVICES, CUSTOM COMMISSION & AI ACADEMY COURSES -->
+        <section id="servicesSection" class="py-16 lg:py-24 border-t gold-border bg-gradient-to-b from-transparent via-amber-950/10 to-transparent">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-xs uppercase tracking-[0.25em] text-amber-400 font-semibold">THÁI DƯƠNG CREATIVE STUDIO & AI ACADEMY</span>
+                    <h3 class="font-serif-art text-3xl sm:text-5xl font-bold mt-2">Dịch Vụ Sáng Tạo Ảnh Nghệ Thuật & Đào Tạo AI</h3>
+                    <p class="text-sm sm:text-base text-stone-400 mt-3">
+                        Bên cạnh không gian trưng bày, thương hiệu <strong class="text-amber-300">THÁI DƯƠNG</strong> nhận thực hiện các dự án hình ảnh nghệ thuật theo yêu cầu riêng và chuyển giao quy trình làm chủ công nghệ AI thị giác.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Left 7 Cols: Services & AI Courses Showcase -->
+                    <div class="lg:col-span-7 space-y-6">
+                        <h4 class="font-serif-art text-2xl font-bold text-amber-300 flex items-center gap-2">
+                            <i data-lucide="sparkles" class="w-5 h-5"></i>
+                            <span>1. Dịch Vụ Thiết Kế & Sáng Tạo Hình Ảnh AI Độc Bản</span>
+                        </h4>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="museum-card rounded-xl p-5 space-y-2">
+                                <div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                                    <i data-lucide="user-check" class="w-5 h-5"></i>
+                                </div>
+                                <h5 class="font-semibold text-base">Chân Dung Nghệ Thuật & Thương Hiệu Cá Nhân</h5>
+                                <p class="text-xs text-stone-400 leading-relaxed">Thiết kế bộ ảnh profile doanh nhân, nghệ sĩ, nàng thơ Áo dài hoặc concept studio cao cấp giữ nguyên đường nét khuôn mặt.</p>
+                                <div class="text-xs font-semibold text-amber-400 pt-1">Từ 500.000đ / Bộ Concept</div>
+                            </div>
+
+                            <div class="museum-card rounded-xl p-5 space-y-2">
+                                <div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                                    <i data-lucide="film" class="w-5 h-5"></i>
+                                </div>
+                                <h5 class="font-semibold text-base">Visual MV Ca Nhạc, Poster & Bìa Album</h5>
+                                <p class="text-xs text-stone-400 leading-relaxed">Xây dựng trọn gói bối cảnh siêu thực, key visual MV YouTube, poster phim và keyframe chuyển động chuẩn điện ảnh 4K/8K.</p>
+                                <div class="text-xs font-semibold text-amber-400 pt-1">Từ 1.200.000đ / Dự Án</div>
+                            </div>
+
+                            <div class="museum-card rounded-xl p-5 space-y-2">
+                                <div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                                    <i data-lucide="history" class="w-5 h-5"></i>
+                                </div>
+                                <h5 class="font-semibold text-base">Phục Chế Ảnh Cũ & Tái Tạo Di Sản Gia Đình</h5>
+                                <p class="text-xs text-stone-400 leading-relaxed">Khôi phục ảnh xưa mờ hỏng, lên màu tự nhiên và nâng cấp độ nét siêu phân giải chuẩn in ấn đóng khung lưu niệm.</p>
+                                <div class="text-xs font-semibold text-amber-400 pt-1">Từ 300.000đ / Tác Phẩm</div>
+                            </div>
+
+                            <div class="museum-card rounded-xl p-5 space-y-2">
+                                <div class="w-9 h-9 rounded-lg bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                                </div>
+                                <h5 class="font-semibold text-base">Ảnh Thời Trang Lookbook & Quảng Cáo Sản Phẩm</h5>
+                                <p class="text-xs text-stone-400 leading-relaxed">Tạo bộ sưu tập thời trang cao cấp, lookbook thương mại và phối cảnh sản phẩm sang trọng tiết kiệm 80% chi phí studio.</p>
+                                <div class="text-xs font-semibold text-amber-400 pt-1">Báo giá theo Lookbook</div>
+                            </div>
+                        </div>
+
+                        <!-- AI Academy Courses -->
+                        <h4 class="font-serif-art text-2xl font-bold text-amber-300 flex items-center gap-2 pt-4">
+                            <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+                            <span>2. Các Khóa Học Sáng Tạo Nghệ Thuật AI — Thái Dương Academy</span>
+                        </h4>
+
+                        <div class="space-y-3">
+                            <div class="museum-card rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-2 py-0.5 text-[10px] rounded bg-amber-500/20 text-amber-300 font-semibold uppercase">Khóa Cơ Bản & Nâng Cao</span>
+                                        <span class="text-xs text-stone-400">• 12 Buổi Thực Chiến 1-1 / Nhóm Nhỏ</span>
+                                    </div>
+                                    <h5 class="font-semibold text-base">Làm Chủ Nghệ Thuật Prompt & Nhiếp Ảnh AI Đa Phong Cách</h5>
+                                    <p class="text-xs text-stone-400">Từ tư duy ánh sáng, bố cục, chất liệu đến kiểm soát nhân vật đồng nhất cho chân dung, phong cảnh và tranh màu nước.</p>
+                                </div>
+                                <button type="button" data-select-service="Khóa học: Làm Chủ Nghệ Thuật Prompt & Nhiếp Ảnh AI" class="btn-quick-select-service shrink-0 px-4 py-2 rounded-lg border border-amber-400/50 hover:bg-amber-500 hover:text-stone-950 text-amber-300 text-xs font-semibold transition">
+                                    Đăng Ký Tư Vấn
+                                </button>
+                            </div>
+
+                            <div class="museum-card rounded-xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                                <div class="space-y-1">
+                                    <div class="flex items-center gap-2">
+                                        <span class="px-2 py-0.5 text-[10px] rounded bg-emerald-500/20 text-emerald-300 font-semibold uppercase">Chuyên Sâu MV & Phục Chế</span>
+                                        <span class="text-xs text-stone-400">• 10 Buổi + Kho Prompt Độc Quyền</span>
+                                    </div>
+                                    <h5 class="font-semibold text-base">Sản Xuất Visual MV Ca Nhạc, Poster Điện Ảnh & Phục Chế Ảnh AI</h5>
+                                    <p class="text-xs text-stone-400">Quy trình kết hợp tạo ảnh nghệ thuật, đồng bộ kịch bản thị giác và xây dựng thương hiệu cá nhân bền vững.</p>
+                                </div>
+                                <button type="button" data-select-service="Khóa học: Sản Xuất Visual MV & Phục Chế Ảnh AI" class="btn-quick-select-service shrink-0 px-4 py-2 rounded-lg border border-amber-400/50 hover:bg-amber-500 hover:text-stone-950 text-amber-300 text-xs font-semibold transition">
+                                    Đăng Ký Tư Vấn
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right 5 Cols: Interactive Commission & Course Registration Form -->
+                    <div class="lg:col-span-5 museum-card rounded-2xl p-6 sm:p-8 border-amber-500/40">
+                        <div class="flex items-center justify-between mb-4">
+                            <div>
+                                <span class="text-[11px] uppercase tracking-widest text-amber-400 font-semibold">GỬI YÊU CẦU TRỰC TIẾP</span>
+                                <h4 class="font-serif-art text-2xl font-bold">Đặt Hàng Tạo Ảnh & Đăng Ký Khóa Học</h4>
+                            </div>
+                            <i data-lucide="send" class="w-6 h-6 text-amber-400"></i>
+                        </div>
+                        <p class="text-xs text-stone-400 mb-6">
+                            Mọi yêu cầu sẽ được lưu vào hệ thống Quản trị viên của Thái Dương và hỗ trợ xuất tin nhắn gửi nhanh qua Zalo / Email.
+                        </p>
+
+                        <form id="commissionForm" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-medium text-stone-300 mb-1">Họ và tên của bạn *</label>
+                                <input id="reqName" type="text" required placeholder="Ví dụ: Nguyễn Minh Anh" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100 focus:outline-none focus:border-amber-400">
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-stone-300 mb-1">Số điện thoại / Zalo *</label>
+                                    <input id="reqPhone" type="tel" required placeholder="09xx xxx xxx" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100 focus:outline-none focus:border-amber-400">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-stone-300 mb-1">Email nhận tác phẩm</label>
+                                    <input id="reqEmail" type="email" placeholder="ten@email.com" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100 focus:outline-none focus:border-amber-400">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-stone-300 mb-1">Hạng mục quan tâm *</label>
+                                    <select id="reqServiceType" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100 focus:outline-none focus:border-amber-400">
+                                        <option value="Đặt tạo ảnh Chân dung Nghệ thuật AI">Đặt tạo ảnh Chân dung Nghệ thuật AI</option>
+                                        <option value="Thiết kế Poster / Ảnh MV Ca nhạc">Thiết kế Poster / Ảnh MV Ca nhạc</option>
+                                        <option value="Phục chế ảnh cũ độ phân giải cao">Phục chế ảnh cũ độ phân giải cao</option>
+                                        <option value="Thiết kế Ảnh Thời trang / Lookbook">Thiết kế Ảnh Thời trang / Lookbook</option>
+                                        <option value="Khóa học: Làm Chủ Nghệ Thuật Prompt & Nhiếp Ảnh AI">Khóa học: Làm Chủ Nghệ Thuật Prompt & Nhiếp Ảnh AI</option>
+                                        <option value="Khóa học: Sản Xuất Visual MV & Phục Chế Ảnh AI">Khóa học: Sản Xuất Visual MV & Phục Chế Ảnh AI</option>
+                                        <option value="Hợp tác bản quyền / Triển lãm">Hợp tác bản quyền / Triển lãm</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-stone-300 mb-1">Tỷ lệ khung hình mong muốn</label>
+                                    <select id="reqAspectRatio" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100 focus:outline-none focus:border-amber-400">
+                                        <option value="16:9 (Ngang Điện ảnh)">16:9 (Ngang Điện ảnh)</option>
+                                        <option value="9:16 (Dọc Điện thoại / Story)">9:16 (Dọc Điện thoại / Story)</option>
+                                        <option value="1:1 (Vuông Nghệ thuật)">1:1 (Vuông Nghệ thuật)</option>
+                                        <option value="3:4 (Chân dung / Poster)">3:4 (Chân dung / Poster)</option>
+                                        <option value="Tư vấn theo dự án">Tư vấn theo dự án</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-medium text-stone-300 mb-1">Mô tả ý tưởng, phong cách hoặc yêu cầu chi tiết *</label>
+                                <textarea id="reqDescription" rows="3" required placeholder="Mô tả chủ đề, màu sắc chủ đạo, số lượng ảnh cần thực hiện hoặc câu hỏi về khóa học..." class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100 focus:outline-none focus:border-amber-400"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 text-stone-950 font-semibold text-sm shadow-lg shadow-amber-500/20 hover:brightness-110 transition flex items-center justify-center gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                                <span>Gửi Yêu Cầu Tới Thái Dương Studio</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. AUTHOR BIOGRAPHY, PERSONAL BRAND & SOCIAL SHARE -->
+        <section id="authorSection" class="py-16 lg:py-24 border-t gold-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="museum-card rounded-3xl p-6 sm:p-10 lg:p-12 relative overflow-hidden">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        <!-- Author Portrait -->
+                        <div class="lg:col-span-4 flex flex-col items-center text-center">
+                            <div class="relative w-52 h-64 sm:w-60 sm:h-72 rounded-2xl overflow-hidden border-2 border-amber-400/50 shadow-2xl">
+                                <img src="assets/images/chan-dung-nang-tho-ao-dai.jpg" alt="Chân dung đại diện Thương hiệu Thái Dương" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-transparent"></div>
+                                <div class="absolute bottom-3 inset-x-3 text-left">
+                                    <span class="text-[10px] uppercase tracking-widest text-amber-300 block">NHÀ SÁNG LẬP & GIÁM ĐỐC SÁNG TẠO</span>
+                                    <span class="font-serif-art text-xl font-bold text-white">THÁI DƯƠNG</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 flex items-center gap-2 text-xs text-amber-300">
+                                <i data-lucide="award" class="w-4 h-4"></i>
+                                <span>Nghệ Sĩ Thị Giác AI & Nhà Sáng Tạo Nội Dung Số</span>
+                            </div>
+                        </div>
+
+                        <!-- Author Story & Contact Details -->
+                        <div class="lg:col-span-8 space-y-5">
+                            <span class="text-xs uppercase tracking-[0.25em] text-amber-400 font-semibold">ABOUT THE CREATOR • CÂU CHUYỆN THƯƠNG HIỆU</span>
+                            <h3 class="font-serif-art text-3xl sm:text-4xl font-bold">
+                                “Trí Tuệ Nhân Tạo Là Cây Cọ Ánh Sáng, Tâm Hồn Người Nghệ Sĩ Là Linh Hồn Tác Phẩm”
+                            </h3>
+                            <p class="text-sm sm:text-base text-stone-300 leading-relaxed">
+                                <strong class="text-amber-300">THƯ VIỆN HÌNH ẢNH THÁI DƯƠNG</strong> được kiến tạo như một bảo tàng nghệ thuật số cá nhân — nơi lưu giữ hành trình khám phá vẻ đẹp văn hóa Việt Nam, thiên nhiên kỳ vĩ, chiều sâu chân dung con người và những giấc mơ siêu thực qua lăng kính AI. Mỗi bức ảnh không chỉ là kết quả của thuật toán mà là sự chắt lọc tỉ mỉ về ánh sáng, bố cục hội họa và thông điệp nhân văn.
+                            </p>
+
+                            <!-- Contact & Social Sharing Channels -->
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
+                                <div class="p-4 rounded-xl bg-stone-900/70 border gold-border">
+                                    <div class="text-xs text-stone-400">Hotline / Zalo Tư Vấn</div>
+                                    <div class="text-sm font-semibold text-amber-300 mt-1 flex items-center gap-1.5">
+                                        <i data-lucide="phone" class="w-4 h-4"></i> 0909.888.999 (Thái Dương)
+                                    </div>
+                                </div>
+                                <div class="p-4 rounded-xl bg-stone-900/70 border gold-border">
+                                    <div class="text-xs text-stone-400">Email Liên Hệ & Bản Quyền</div>
+                                    <div class="text-sm font-semibold text-amber-300 mt-1 flex items-center gap-1.5">
+                                        <i data-lucide="mail" class="w-4 h-4"></i> contact@thaiduongart.vn
+                                    </div>
+                                </div>
+                                <div class="p-4 rounded-xl bg-stone-900/70 border gold-border">
+                                    <div class="text-xs text-stone-400">Không Gian Triển Lãm</div>
+                                    <div class="text-sm font-semibold text-amber-300 mt-1 flex items-center gap-1.5">
+                                        <i data-lucide="globe" class="w-4 h-4"></i> thuvienthaiduong.vn
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Share Buttons -->
+                            <div class="pt-4 border-t gold-border flex flex-wrap items-center justify-between gap-4">
+                                <span class="text-xs text-stone-400 font-medium">Chia sẻ Thư Viện Hình Ảnh Thái Dương lên:</span>
+                                <div class="flex flex-wrap items-center gap-2.5">
+                                    <button type="button" data-share-platform="facebook" class="btn-share-site px-3.5 py-2 rounded-lg bg-[#1877F2]/20 hover:bg-[#1877F2]/30 border border-[#1877F2]/40 text-blue-300 text-xs font-medium flex items-center gap-1.5 transition">
+                                        <i data-lucide="share-2" class="w-3.5 h-3.5"></i> Chia sẻ Facebook
+                                    </button>
+                                    <button type="button" data-share-platform="zalo" class="btn-share-site px-3.5 py-2 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 border border-sky-400/40 text-sky-300 text-xs font-medium flex items-center gap-1.5 transition">
+                                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Chia sẻ Zalo
+                                    </button>
+                                    <button type="button" data-share-platform="copy" class="btn-share-site px-3.5 py-2 rounded-lg bg-amber-500/15 hover:bg-amber-500/25 border border-amber-400/40 text-amber-300 text-xs font-medium flex items-center gap-1.5 transition">
+                                        <i data-lucide="link" class="w-3.5 h-3.5"></i> Sao chép liên kết Website
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==========================================================
+         VIEW 2: ADMIN DASHBOARD & CLOUD STORAGE MANAGEMENT
+         ========================================================== -->
+    <section id="viewAdmin" class="hidden flex-grow py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+
+            <!-- Admin Header Banner -->
+            <div class="museum-card rounded-2xl p-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-amber-400/40">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">ĐÃ XÁC THỰC QUẢN TRỊ VIÊN</span>
+                        <span class="text-xs text-stone-400">• Không cần lập trình • Đồng bộ Cloud & GitHub Pages</span>
+                    </div>
+                    <h2 class="font-serif-art text-3xl font-bold mt-1">Trung Tâm Quản Trị Thư Viện Hình Ảnh Thái Dương</h2>
+                </div>
+                <div class="flex flex-wrap items-center gap-2.5">
+                    <button id="btnAdminAddArtwork" type="button" class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-600 text-stone-950 font-semibold text-xs sm:text-sm flex items-center gap-1.5 shadow-md">
+                        <i data-lucide="plus-circle" class="w-4 h-4"></i> Thêm / Tải Nhiều Ảnh Mới
+                    </button>
+                    <button id="btnAdminExportJSON" type="button" class="px-3.5 py-2.5 rounded-xl border gold-border bg-stone-900 hover:bg-amber-500/15 text-amber-300 text-xs sm:text-sm font-medium flex items-center gap-1.5">
+                        <i data-lucide="download" class="w-4 h-4"></i> Xuất `data/gallery.json`
+                    </button>
+                    <label class="px-3.5 py-2.5 rounded-xl border gold-border bg-stone-900 hover:bg-amber-500/15 text-stone-200 text-xs sm:text-sm font-medium flex items-center gap-1.5 cursor-pointer">
+                        <i data-lucide="upload" class="w-4 h-4 text-amber-400"></i> Nhập JSON
+                        <input id="inputAdminImportJSON" type="file" accept=".json" class="hidden">
+                    </label>
+                    <button id="btnAdminExitToPublic" type="button" class="px-3.5 py-2.5 rounded-xl border border-stone-700 hover:bg-stone-800 text-stone-300 text-xs sm:text-sm flex items-center gap-1.5">
+                        <i data-lucide="eye" class="w-4 h-4"></i> Xem Triển Lãm
+                    </button>
+                    <button id="btnAdminLogout" type="button" class="px-3 py-2.5 rounded-xl border border-rose-500/40 bg-rose-500/10 hover:bg-rose-500/20 text-rose-300 text-xs sm:text-sm flex items-center gap-1" title="Đăng xuất Quản trị">
+                        <i data-lucide="log-out" class="w-4 h-4"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Admin Sub-Tabs -->
+            <div class="flex flex-wrap items-center gap-2 border-b gold-border pb-3">
+                <button type="button" data-admin-tab="artworks" class="admin-tab-btn px-4 py-2 rounded-xl bg-amber-500 text-stone-950 font-semibold text-xs sm:text-sm flex items-center gap-2">
+                    <i data-lucide="images" class="w-4 h-4"></i> Quản Lý & Sắp Xếp Tác Phẩm (<span id="adminCountArtworks">9</span>)
+                </button>
+                <button type="button" data-admin-tab="cloud" class="admin-tab-btn px-4 py-2 rounded-xl border gold-border hover:bg-amber-500/10 text-xs sm:text-sm flex items-center gap-2">
+                    <i data-lucide="cloud-cog" class="w-4 h-4 text-amber-400"></i> Cấu Hình Lưu Trữ Đám Mây (Cloudinary / GitHub / Supabase)
+                </button>
+                <button type="button" data-admin-tab="requests" class="admin-tab-btn px-4 py-2 rounded-xl border gold-border hover:bg-amber-500/10 text-xs sm:text-sm flex items-center gap-2">
+                    <i data-lucide="inbox" class="w-4 h-4 text-amber-400"></i> Yêu Cầu Thiết Kế & Học Viên (<span id="adminCountRequests">2</span>)
+                </button>
+                <button type="button" data-admin-tab="security" class="admin-tab-btn px-4 py-2 rounded-xl border gold-border hover:bg-amber-500/10 text-xs sm:text-sm flex items-center gap-2">
+                    <i data-lucide="key-round" class="w-4 h-4 text-amber-400"></i> Bảo Mật & Mật Khẩu
+                </button>
+            </div>
+
+            <!-- TAB 1: ARTWORKS TABLE MANAGEMENT -->
+            <div id="adminTabArtworks" class="space-y-4">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <p class="text-xs sm:text-sm text-stone-400">
+                        Bạn có thể bật/tắt quyền cho phép khách tải ảnh gốc, đánh dấu Tác phẩm tiêu biểu, đổi thứ tự trưng bày (Lên/Xuống), chỉnh sửa thông tin hoặc xóa tác phẩm.
+                    </p>
+                    <button id="btnAdminResetDefaultData" type="button" class="text-xs text-amber-400 hover:underline flex items-center gap-1">
+                        <i data-lucide="rotate-ccw" class="w-3.5 h-3.5"></i> Khôi phục bộ dữ liệu mẫu ban đầu
+                    </button>
+                </div>
+
+                <div class="museum-card rounded-2xl overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                            <thead>
+                                <tr class="border-b gold-border bg-stone-900/90 text-amber-300 uppercase text-[11px] tracking-wider">
+                                    <th class="py-3.5 px-4">Thứ tự</th>
+                                    <th class="py-3.5 px-4">Ảnh thu nhỏ</th>
+                                    <th class="py-3.5 px-4">Tên tác phẩm & Mô tả</th>
+                                    <th class="py-3.5 px-4">Danh mục & Tỷ lệ</th>
+                                    <th class="py-3.5 px-4 text-center">Tiêu biểu</th>
+                                    <th class="py-3.5 px-4 text-center">Cho phép tải gốc</th>
+                                    <th class="py-3.5 px-4 text-right">Thao tác</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminArtworksTableBody" class="divide-y divide-amber-500/10">
+                                <!-- Populated via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: REAL CLOUD STORAGE & GITHUB SYNC CONNECTOR -->
+            <div id="adminTabCloud" class="hidden space-y-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Cloudinary Connector -->
+                    <div class="museum-card rounded-2xl p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-sky-500/15 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                                    <i data-lucide="cloud-upload" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif-art text-xl font-bold">1. Kết Nối Cloudinary CDN (Lưu Trữ Ảnh Bền Vững)</h4>
+                                    <p class="text-xs text-stone-400">Miễn phí 25GB, tự động tạo ảnh thu nhỏ WebP/AVIF & giữ nguyên ảnh gốc 4K/8K</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <div>
+                                <label class="block text-xs text-stone-300 mb-1">Cloudinary Cloud Name</label>
+                                <input id="cfgCloudinaryName" type="text" placeholder="Ví dụ: thaiduong-art-gallery" class="w-full px-3.5 py-2 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-stone-300 mb-1">Unsigned Upload Preset Name</label>
+                                <input id="cfgCloudinaryPreset" type="text" placeholder="Ví dụ: thaiduong_unsigned" class="w-full px-3.5 py-2 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-stone-300 mb-1">Thư mục lưu trên Cloud (Folder)</label>
+                                <input id="cfgCloudinaryFolder" type="text" value="thai-duong-gallery" class="w-full px-3.5 py-2 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                            </div>
+                        </div>
+                        <p class="text-[11px] text-stone-400 leading-relaxed bg-stone-900/70 p-3 rounded-xl border gold-border">
+                            Khi điền Cloud Name & Upload Preset, mỗi khi bạn tải ảnh mới trong mục "Thêm Ảnh Mới", hệ thống sẽ đẩy trực tiếp file ảnh gốc lên máy chủ Cloudinary qua REST API (`https://api.cloudinary.com/v1_1/{cloud_name}/image/upload`) và trả về đường dẫn CDN vĩnh viễn.
+                        </p>
+                    </div>
+
+                    <!-- GitHub Repository Direct Commit Connector -->
+                    <div class="museum-card rounded-2xl p-6 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400">
+                                    <i data-lucide="git-branch" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-serif-art text-xl font-bold">2. Đồng Bộ Trực Tiếp Lên GitHub Pages API</h4>
+                                    <p class="text-xs text-stone-400">Cập nhật danh mục tác phẩm cho toàn bộ khách truy cập trên toàn cầu</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="space-y-3 pt-2">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs text-stone-300 mb-1">GitHub Username / Owner</label>
+                                    <input id="cfgGithubOwner" type="text" placeholder="Ví dụ: thaiduong-ai" class="w-full px-3.5 py-2 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-stone-300 mb-1">Tên Repository</label>
+                                    <input id="cfgGithubRepo" type="text" placeholder="Ví dụ: thu-vien-thai-duong" class="w-full px-3.5 py-2 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                <div>
+                                    <label class="block text-xs text-stone-300 mb-1">Nhánh (Branch)</label>
+                                    <input id="cfgGithubBranch" type="text" value="main" class="w-full px-3.5 py-2 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                                </div>
+                                <div>
+                                    <label class="block text-xs text-stone-300 mb-1">Đường dẫn file dữ liệu</label>
+                                    <input id="cfgGithubPath" type="text" value="data/gallery.json" class="w-full px-3.5 py-2 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs text-stone-300 mb-1">GitHub Personal Access Token (Fine-grained `contents:write`)</label>
+                                <input id="cfgGithubToken" type="password" placeholder="github_pat_..." class="w-full px-3.5 py-2 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-3 pt-2">
+                            <button id="btnSaveCloudConfig" type="button" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-semibold text-xs sm:text-sm flex items-center gap-1.5">
+                                <i data-lucide="save" class="w-4 h-4"></i> Lưu Cấu Hình Đám Mây
+                            </button>
+                            <button id="btnPushToGithubNow" type="button" class="px-4 py-2.5 rounded-xl border border-emerald-500/40 bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 font-medium text-xs sm:text-sm flex items-center gap-1.5">
+                                <i data-lucide="upload-cloud" class="w-4 h-4"></i> Đồng Bộ `gallery.json` Lên GitHub Ngay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: CLIENT REQUESTS & COURSE LEADS -->
+            <div id="adminTabRequests" class="hidden space-y-4">
+                <div class="museum-card rounded-2xl p-6">
+                    <h4 class="font-serif-art text-2xl font-bold mb-4">Danh Sách Yêu Cầu Thiết Kế Ảnh & Đăng Ký Khóa Học AI</h4>
+                    <div id="adminRequestsList" class="space-y-3">
+                        <!-- Populated via JS -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: SECURITY & ADMIN PASSWORD -->
+            <div id="adminTabSecurity" class="hidden">
+                <div class="museum-card rounded-2xl p-6 max-w-xl space-y-4">
+                    <h4 class="font-serif-art text-2xl font-bold">Thiết Lập Mật Khẩu Quản Trị Viên</h4>
+                    <p class="text-xs text-stone-400">
+                        Mật khẩu mặc định để bạn chạy thử là <code class="text-amber-300 font-mono">thaiduong2026</code>. Bạn có thể đổi sang mật khẩu riêng ngay tại đây.
+                    </p>
+                    <div>
+                        <label class="block text-xs text-stone-300 mb-1">Mật khẩu quản trị mới</label>
+                        <input id="inputNewAdminPass" type="password" placeholder="Nhập mật khẩu mới..." class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                    </div>
+                    <button id="btnUpdateAdminPass" type="button" class="px-5 py-2.5 rounded-xl bg-amber-500 text-stone-950 font-semibold text-xs sm:text-sm">
+                        Cập Nhật Mật Khẩu
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         VIEW 3: ARCHITECTURE, DIRECTORY STRUCTURE & STEP-BY-STEP GUIDE
+         ========================================================== -->
+    <section id="viewArchitecture" class="hidden flex-grow py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b gold-border pb-6">
+                <div>
+                    <span class="text-xs uppercase tracking-[0.25em] text-amber-400 font-semibold">HỘI ĐỒNG CHUYÊN GIA • TÀI LIỆU KỸ THUẬT & VẬN HÀNH</span>
+                    <h2 class="font-serif-art text-3xl sm:text-5xl font-bold mt-1">Kiến Trúc Website & Hướng Dẫn Triển Khai Toàn Diện</h2>
+                </div>
+                <button type="button" data-view-target="public" class="self-start px-4 py-2.5 rounded-xl border gold-border hover:bg-amber-500/10 text-amber-300 text-xs sm:text-sm flex items-center gap-2">
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Quay lại Phòng Triển Lãm
+                </button>
+            </div>
+
+            <!-- Section A: Directory Structure -->
+            <div class="museum-card rounded-2xl p-6 sm:p-8 space-y-4">
+                <h3 class="font-serif-art text-2xl font-bold text-amber-300 flex items-center gap-2">
+                    <i data-lucide="folder-tree" class="w-5 h-5"></i>
+                    <span>1. Tổ Chức Thư Mục Chuẩn Triển Khai GitHub Pages</span>
+                </h3>
+                <p class="text-sm text-stone-300">
+                    Hệ thống được thiết kế theo mô hình <strong>Static Web App + Cloud Media CDN + JSON Catalog</strong>, vừa chạy độc lập ngay trong 1 file duy nhất, vừa tách chuẩn module trong gói mã nguồn <code>thu-vien-hinh-anh-thai-duong-source.zip</code>:
+                </p>
+                <pre class="bg-stone-950 border gold-border rounded-xl p-4 text-xs sm:text-sm text-amber-200 font-mono overflow-x-auto leading-relaxed">thu-vien-hinh-anh-thai-duong/
+├── index.html                  # Giao diện chính chuẩn SEO, OpenGraph, Schema.org ArtGallery
+├── CNAME                       # Khai báo tên miền riêng (ví dụ: thuvienthaiduong.vn)
+├── README.md                   # Tài liệu hướng dẫn vận hành & triển khai chi tiết
+├── assets/
+│   ├── css/
+│   │   └── style.css           # Hệ thống thiết kế Museum Dark/Light, hiệu ứng chuyển động
+│   ├── js/
+│   │   ├── app.js              # Logic hiển thị lưới đa tỷ lệ, tìm kiếm, lọc, Lightbox, Zoom
+│   │   ├── cloud-storage.js    # Module kết nối Cloudinary API, GitHub REST API & Thumbnail WebP
+│   │   └── admin.js            # Khu vực quản trị, tải nhiều ảnh cùng lúc, xuất/nhập JSON
+│   └── images/                 # Thư mục chứa ảnh bìa & tác phẩm mẫu ban đầu
+└── data/
+    └── gallery.json            # Cơ sở dữ liệu danh mục tác phẩm bền vững trên GitHub/Cloud</pre>
+            </div>
+
+            <!-- Section B: Cloud Storage Comparison -->
+            <div class="museum-card rounded-2xl p-6 sm:p-8 space-y-4">
+                <h3 class="font-serif-art text-2xl font-bold text-amber-300 flex items-center gap-2">
+                    <i data-lucide="database" class="w-5 h-5"></i>
+                    <span>2. Phương Án Lưu Trữ Ảnh Thực Tế & Bền Vững (Không Phụ Thuộc Bộ Nhớ Tạm Trình Duyệt)</span>
+                </h3>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                        <thead>
+                            <tr class="border-b gold-border bg-stone-900 text-amber-300">
+                                <th class="p-3">Giải pháp kết hợp</th>
+                                <th class="p-3">Vai trò lưu trữ</th>
+                                <th class="p-3">Chi phí</th>
+                                <th class="p-3">Ưu điểm vượt trội cho Thư Viện Thái Dương</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-amber-500/10 text-stone-300">
+                            <tr>
+                                <td class="p-3 font-semibold text-white">Cloudinary CDN (Khuyên dùng số 1)</td>
+                                <td class="p-3">Lưu trữ file ảnh gốc 4K/8K & tự động sinh ảnh thu nhỏ (Thumbnail)</td>
+                                <td class="p-3 text-emerald-400 font-medium">Miễn phí (25GB)</td>
+                                <td class="p-3">Tải ảnh trực tiếp từ trang Quản trị mà không cần server; tự động nén WebP giúp web tải nhanh gấp 5 lần nhưng vẫn giữ nguyên file gốc.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-white">GitHub Repository (`data/gallery.json`)</td>
+                                <td class="p-3">Lưu trữ thông tin tác phẩm (tên, mô tả, từ khóa, ngày sáng tạo, link ảnh)</td>
+                                <td class="p-3 text-emerald-400 font-medium">Miễn phí 100%</td>
+                                <td class="p-3">Bền vững vĩnh viễn cùng mã nguồn trên GitHub Pages, có lịch sử phiên bản (Git history), không bao giờ mất dữ liệu khi xóa lịch sử trình duyệt.</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-semibold text-white">Cloudflare R2 / Supabase Storage</td>
+                                <td class="p-3">Phương án mở rộng khi kho ảnh vượt trên 10.000 tác phẩm</td>
+                                <td class="p-3 text-emerald-400 font-medium">Miễn phí 10GB đầu</td>
+                                <td class="p-3">Miễn phí băng thông tải xuống (0đ phí Egress), phù hợp khi phát triển thành nền tảng thương mại lớn.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Section C: Step-by-Step Vietnamese Guide -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="museum-card rounded-2xl p-6 space-y-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-amber-400">BƯỚC 1 & BƯỚC 2</div>
+                    <h4 class="font-serif-art text-2xl font-bold">Cách Chạy Thử & Tải Nhiều Ảnh Lên Thư Viện</h4>
+                    <ol class="list-decimal list-inside space-y-2 text-xs sm:text-sm text-stone-300 leading-relaxed">
+                        <li><strong>Chạy thử ngay:</strong> Toàn bộ chức năng đã hoạt động trực tiếp trên giao diện này hoặc mở file <code>index.html</code> bằng bất kỳ trình duyệt nào.</li>
+                        <li><strong>Đăng nhập Quản trị:</strong> Nhấn nút <strong>"Quản Trị Viên"</strong> ở góc phải trên cùng (Mật khẩu mặc định: <code>thaiduong2026</code>).</li>
+                        <li><strong>Tải nhiều ảnh cùng lúc:</strong> Nhấn <strong>"Thêm / Tải Nhiều Ảnh Mới"</strong>, kéo thả 1 hoặc nhiều ảnh từ máy tính/điện thoại, hoặc dán URL ảnh từ Cloud. Hệ thống tự động nhận diện tỷ lệ 16:9, 9:16, 1:1, 3:4 và tạo bản thu nhỏ tối ưu tốc độ.</li>
+                        <li><strong>Điền thông tin:</strong> Đặt tên tác phẩm, viết lời bình nghệ thuật, gắn từ khóa, chọn chủ đề, ngày sáng tạo và quyền cho phép tải ảnh gốc.</li>
+                    </ol>
+                </div>
+
+                <div class="museum-card rounded-2xl p-6 space-y-3">
+                    <div class="text-xs font-bold uppercase tracking-wider text-amber-400">BƯỚC 3 & BƯỚC 4</div>
+                    <h4 class="font-serif-art text-2xl font-bold">Đưa Lên GitHub Pages & Gắn Tên Miền Riêng</h4>
+                    <ol class="list-decimal list-inside space-y-2 text-xs sm:text-sm text-stone-300 leading-relaxed">
+                        <li><strong>Đưa lên GitHub Pages:</strong> Tạo một Repository mới trên GitHub (ví dụ <code>thu-vien-thai-duong</code>), tải các file trong gói mã nguồn lên. Vào <em>Settings → Pages → Branch: main</em> và nhấn Save.</li>
+                        <li><strong>Kết nối Lưu trữ Đám mây:</strong> Tạo tài khoản miễn phí tại <em>cloudinary.com</em>, vào <em>Settings → Upload → Add upload preset (chọn Signing Mode: Unsigned)</em> rồi điền vào tab <strong>Cấu Hình Lưu Trữ Đám Mây</strong> trong trang Quản trị.</li>
+                        <li><strong>Gắn tên miền riêng (ví dụ `thuvienthaiduong.vn`):</strong> Tại trang quản lý DNS tên miền (Tenten, Mắt Bão, Nhân Hòa, Cloudflare), tạo 4 bản ghi <code>A</code> trỏ về IP GitHub Pages (<code>185.199.108.153</code>, <code>.109.153</code>, <code>.110.153</code>, <code>.111.153</code>) và bản ghi <code>CNAME</code> <code>www</code> trỏ về <code>&lt;username&gt;.github.io</code>. Tích chọn <em>Enforce HTTPS</em> trong GitHub Pages.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================
+         MODAL 1: FULLSCREEN LIGHTBOX VIEWER (ZOOM, PAN, SLIDESHOW, SHARE, DOWNLOAD)
+         ========================================================== -->
+    <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-stone-950/95 backdrop-blur-xl flex flex-col">
+        <!-- Lightbox Top Bar -->
+        <div class="h-16 px-4 sm:px-6 border-b gold-border flex items-center justify-between gap-4 bg-stone-950/80 z-20">
+            <div class="flex items-center gap-3 min-w-0">
+                <span id="lbCategoryBadge" class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30 shrink-0">Chủ đề</span>
+                <h4 id="lbTitle" class="font-serif-art text-lg sm:text-2xl font-bold text-white truncate">Tên tác phẩm</h4>
+                <span id="lbAspectBadge" class="hidden sm:inline-block px-2 py-0.5 rounded text-[10px] font-mono bg-stone-800 text-stone-300">16:9</span>
+            </div>
+
+            <!-- Lightbox Controls -->
+            <div class="flex items-center gap-1.5 sm:gap-2">
+                <button id="btnLbZoomOut" type="button" class="p-2 rounded-lg border gold-border hover:bg-amber-500/15 text-stone-200" title="Thu nhỏ (-)">
+                    <i data-lucide="zoom-out" class="w-4 h-4"></i>
+                </button>
+                <span id="lbZoomLevel" class="text-xs font-mono text-amber-300 w-12 text-center">100%</span>
+                <button id="btnLbZoomIn" type="button" class="p-2 rounded-lg border gold-border hover:bg-amber-500/15 text-stone-200" title="Phóng to (+)">
+                    <i data-lucide="zoom-in" class="w-4 h-4"></i>
+                </button>
+                <button id="btnLbSlideshow" type="button" class="px-3 py-2 rounded-lg border gold-border hover:bg-amber-500/15 text-amber-300 text-xs font-medium flex items-center gap-1.5" title="Tự động chuyển ảnh">
+                    <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                    <span id="lbSlideshowText" class="hidden sm:inline">Trình chiếu</span>
+                </button>
+                <button id="btnLbFullscreen" type="button" class="p-2 rounded-lg border gold-border hover:bg-amber-500/15 text-stone-200" title="Toàn màn hình">
+                    <i data-lucide="maximize" class="w-4 h-4"></i>
+                </button>
+                <button id="btnLbClose" type="button" class="p-2 rounded-lg bg-rose-500/20 border border-rose-500/40 hover:bg-rose-500/30 text-rose-200 ml-1" title="Đóng (ESC)">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Lightbox Body: Image Viewport + Metadata Sidebar -->
+        <div class="flex-grow grid grid-cols-1 lg:grid-cols-12 overflow-hidden relative">
+            <!-- Image Canvas Area -->
+            <div class="lg:col-span-8 xl:col-span-9 relative flex items-center justify-center overflow-hidden bg-black/60 p-4 sm:p-8 select-none">
+                <!-- Prev Button -->
+                <button id="btnLbPrev" type="button" class="absolute left-3 sm:left-6 z-20 w-11 h-11 rounded-full bg-stone-900/80 hover:bg-amber-500 hover:text-stone-950 border gold-border flex items-center justify-center text-amber-300 transition shadow-lg" title="Tác phẩm trước (Phím mũi tên trái)">
+                    <i data-lucide="chevron-left" class="w-6 h-6"></i>
+                </button>
+
+                <img id="lightboxImage" src="" alt="" class="max-h-[72vh] lg:max-h-[80vh] max-w-full object-contain rounded-lg shadow-2xl">
+
+                <!-- Next Button -->
+                <button id="btnLbNext" type="button" class="absolute right-3 sm:right-6 z-20 w-11 h-11 rounded-full bg-stone-900/80 hover:bg-amber-500 hover:text-stone-950 border gold-border flex items-center justify-center text-amber-300 transition shadow-lg" title="Tác phẩm tiếp theo (Phím mũi tên phải)">
+                    <i data-lucide="chevron-right" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Artwork Details & Actions Panel -->
+            <div class="lg:col-span-4 xl:col-span-3 border-t lg:border-t-0 lg:border-l gold-border bg-stone-950/95 p-5 sm:p-6 overflow-y-auto flex flex-col justify-between space-y-6">
+                <div class="space-y-4">
+                    <div>
+                        <div class="text-[11px] uppercase tracking-widest text-amber-400 font-semibold">TÁC PHẨM NGHỆ THUẬT SỐ AI</div>
+                        <h5 id="lbDetailTitle" class="font-serif-art text-2xl font-bold text-white mt-0.5"></h5>
+                        <div class="flex items-center gap-3 text-xs text-stone-400 mt-1">
+                            <span id="lbDetailDate" class="flex items-center gap-1"><i data-lucide="calendar" class="w-3.5 h-3.5 text-amber-400"></i> 2026</span>
+                            <span id="lbDetailViews" class="flex items-center gap-1"><i data-lucide="eye" class="w-3.5 h-3.5 text-amber-400"></i> 0 lượt xem</span>
+                        </div>
+                    </div>
+
+                    <p id="lbDetailDesc" class="text-xs sm:text-sm text-stone-300 leading-relaxed border-y gold-border py-3.5"></p>
+
+                    <div class="space-y-2 text-xs">
+                        <div class="flex justify-between">
+                            <span class="text-stone-400">Bộ sưu tập:</span>
+                            <span id="lbDetailCollection" class="text-amber-300 font-medium"></span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-stone-400">Tỷ lệ khung hình:</span>
+                            <span id="lbDetailRatio" class="text-stone-200 font-mono"></span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-stone-400">Tác giả / Thương hiệu:</span>
+                            <span class="text-amber-300 font-semibold">THÁI DƯƠNG</span>
+                        </div>
+                    </div>
+
+                    <!-- Keywords -->
+                    <div>
+                        <div class="text-xs text-stone-400 mb-1.5">Từ khóa (Keywords):</div>
+                        <div id="lbDetailTags" class="flex flex-wrap gap-1.5"></div>
+                    </div>
+                </div>
+
+                <!-- Download & Share Footer -->
+                <div class="space-y-3 pt-4 border-t gold-border">
+                    <button id="btnLbDownloadOriginal" type="button" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-600 text-stone-950 font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-lg">
+                        <i data-lucide="download" class="w-4 h-4"></i>
+                        <span id="lbDownloadBtnText">Tải Ảnh Gốc Chất Lượng Cao</span>
+                    </button>
+
+                    <div class="grid grid-cols-3 gap-2">
+                        <button id="btnLbShareFB" type="button" class="py-2 rounded-lg bg-[#1877F2]/20 hover:bg-[#1877F2]/30 border border-[#1877F2]/40 text-blue-300 text-xs flex items-center justify-center gap-1">
+                            <i data-lucide="share-2" class="w-3.5 h-3.5"></i> Facebook
+                        </button>
+                        <button id="btnLbShareZalo" type="button" class="py-2 rounded-lg bg-sky-500/20 hover:bg-sky-500/30 border border-sky-400/40 text-sky-300 text-xs flex items-center justify-center gap-1">
+                            <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Zalo
+                        </button>
+                        <button id="btnLbCopyLink" type="button" class="py-2 rounded-lg border gold-border hover:bg-amber-500/15 text-amber-300 text-xs flex items-center justify-center gap-1">
+                            <i data-lucide="copy" class="w-3.5 h-3.5"></i> Sao chép
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================
+         MODAL 2: ADMIN LOGIN AUTHENTICATION MODAL
+         ========================================================== -->
+    <div id="loginModal" class="fixed inset-0 z-50 hidden bg-stone-950/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="museum-card rounded-2xl max-w-md w-full p-6 sm:p-8 space-y-5 border-amber-400/40">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2.5">
+                    <div class="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-400">
+                        <i data-lucide="lock" class="w-5 h-5"></i>
+                    </div>
+                    <div>
+                        <span class="text-[10px] uppercase tracking-widest text-amber-400 font-semibold">BẢO MẬT QUẢN TRỊ</span>
+                        <h4 class="font-serif-art text-2xl font-bold">Đăng Nhập Quản Trị Viên</h4>
+                    </div>
+                </div>
+                <button id="btnCloseLoginModal" type="button" class="text-stone-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <p class="text-xs text-stone-300 leading-relaxed">
+                Khu vực dành riêng cho chủ sở hữu thương hiệu <strong>THÁI DƯƠNG</strong> để thêm ảnh mới, tải nhiều ảnh cùng lúc, chỉnh sửa, sắp xếp và đồng bộ lưu trữ đám mây.
+            </p>
+
+            <form id="loginForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs text-stone-300 mb-1">Tài khoản Quản trị</label>
+                    <input id="loginUsername" type="text" value="admin@thaiduongart.vn" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                </div>
+                <div>
+                    <label class="block text-xs text-stone-300 mb-1">Mật khẩu Quản trị (Mặc định: <code class="text-amber-300">thaiduong2026</code>)</label>
+                    <input id="loginPassword" type="password" value="thaiduong2026" required class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100 focus:outline-none focus:border-amber-400">
+                </div>
+                <div id="loginErrorMsg" class="hidden text-xs text-rose-400 bg-rose-500/10 border border-rose-500/30 rounded-lg p-2.5">
+                    Mật khẩu chưa chính xác. Vui lòng thử lại (Mặc định: thaiduong2026).
+                </div>
+                <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-400 to-amber-600 text-stone-950 font-semibold text-sm shadow-lg">
+                    Truy Cập Khu Vực Quản Trị
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ==========================================================
+         MODAL 3: ADD / MULTI-UPLOAD / EDIT ARTWORK MODAL
+         ========================================================== -->
+    <div id="artworkModal" class="fixed inset-0 z-50 hidden bg-stone-950/90 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+        <div class="museum-card rounded-2xl max-w-3xl w-full p-6 sm:p-8 space-y-6 my-8 border-amber-400/40 max-h-[92vh] overflow-y-auto">
+            <div class="flex items-center justify-between border-b gold-border pb-4">
+                <div>
+                    <span class="text-[10px] uppercase tracking-widest text-amber-400 font-semibold">THƯ VIỆN HÌNH ẢNH THÁI DƯƠNG</span>
+                    <h4 id="artworkModalTitle" class="font-serif-art text-2xl sm:text-3xl font-bold">Thêm Tác Phẩm Mới (Hỗ Trợ Tải Nhiều Ảnh Cùng Lúc)</h4>
+                </div>
+                <button id="btnCloseArtworkModal" type="button" class="text-stone-400 hover:text-white">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <form id="artworkForm" class="space-y-5">
+                <input id="editArtworkId" type="hidden" value="">
+
+                <!-- Multi-file Dropzone + Direct Cloud URL Input -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <label class="border-2 border-dashed border-amber-500/40 hover:border-amber-400 rounded-2xl p-5 flex flex-col items-center justify-center text-center cursor-pointer bg-stone-900/50 transition">
+                        <i data-lucide="upload-cloud" class="w-9 h-9 text-amber-400 mb-2"></i>
+                        <span class="text-xs sm:text-sm font-semibold text-amber-200">Chọn 1 hoặc nhiều ảnh từ thiết bị</span>
+                        <span class="text-[11px] text-stone-400 mt-1">Tự động tạo ảnh thu nhỏ (Thumbnail) & đẩy lên Cloudinary nếu đã cấu hình</span>
+                        <input id="inputArtworkFiles" type="file" accept="image/*" multiple class="hidden">
+                    </label>
+
+                    <div class="space-y-2 flex flex-col justify-center">
+                        <label class="block text-xs font-medium text-stone-300">Hoặc dán đường dẫn (URL) ảnh trực tiếp từ Cloud / CDN:</label>
+                        <input id="inputArtworkExternalUrl" type="url" placeholder="https://res.cloudinary.com/.../tac-pham.jpg" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                        <p class="text-[11px] text-stone-400">
+                            Hỗ trợ link trực tiếp từ Cloudinary, Cloudflare R2, Google Cloud, GitHub Raw hoặc Supabase.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Upload Preview Queue -->
+                <div id="uploadPreviewContainer" class="hidden space-y-2">
+                    <div class="text-xs font-medium text-amber-300 flex items-center justify-between">
+                        <span id="uploadQueueCountText">Đã chọn 0 tệp ảnh</span>
+                        <span class="text-[11px] text-stone-400">Tự động nhận diện khung hình 16:9, 9:16, 1:1, 3:4</span>
+                    </div>
+                    <div id="uploadPreviewGrid" class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-h-44 overflow-y-auto p-2 rounded-xl bg-stone-950/70 border gold-border"></div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-stone-300 mb-1">Tên tác phẩm nghệ thuật *</label>
+                        <input id="inputArtTitle" type="text" required placeholder="Ví dụ: Giao Hưởng Ánh Dương Trên Vịnh Hạ Long" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                        <span class="text-[10px] text-stone-500">Nếu tải nhiều ảnh cùng lúc, hệ thống sẽ tự động đánh số thứ tự tinh tế.</span>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-stone-300 mb-1">Chủ đề / Danh mục *</label>
+                        <select id="inputArtCategory" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                            <option value="chan-dung">Chân dung nghệ thuật</option>
+                            <option value="phong-canh">Phong cảnh</option>
+                            <option value="hoa-thien-nhien">Hoa và thiên nhiên</option>
+                            <option value="tranh-mau-nuoc">Tranh màu nước</option>
+                            <option value="thoi-trang">Ảnh thời trang</option>
+                            <option value="poster">Poster</option>
+                            <option value="phuc-che">Ảnh phục chế</option>
+                            <option value="mv-ca-nhac">Ảnh MV ca nhạc</option>
+                            <option value="bo-suu-tap-khac">Các bộ sưu tập khác</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-xs font-medium text-stone-300 mb-1">Tỷ lệ khung hình</label>
+                        <select id="inputArtRatio" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                            <option value="auto">Tự động nhận diện từ ảnh</option>
+                            <option value="16:9">Ảnh ngang 16:9</option>
+                            <option value="9:16">Ảnh dọc 9:16</option>
+                            <option value="1:1">Ảnh vuông 1:1</option>
+                            <option value="3:4">Ảnh chân dung 3:4</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-stone-300 mb-1">Bộ sưu tập (Collection)</label>
+                        <input id="inputArtCollection" type="text" value="Tuyển Tập Ánh Dương 2026" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-stone-300 mb-1">Ngày sáng tạo</label>
+                        <input id="inputArtDate" type="date" value="2026-10-25" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-stone-300 mb-1">Mô tả & Lời bình nghệ thuật *</label>
+                    <textarea id="inputArtDesc" rows="3" required placeholder="Viết cảm hứng sáng tạo, thông điệp nghệ thuật hoặc kỹ thuật ánh sáng AI..." class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-stone-300 mb-1">Từ khóa (Ngăn cách bằng dấu phẩy)</label>
+                    <input id="inputArtKeywords" type="text" placeholder="Ví dụ: thái dương, ai art, chân dung, ánh sáng vàng, lụa" class="w-full px-3.5 py-2.5 rounded-xl bg-stone-900 border gold-border text-sm text-stone-100">
+                </div>
+
+                <div class="flex flex-wrap items-center gap-6 pt-2">
+                    <label class="inline-flex items-center gap-2 cursor-pointer text-xs sm:text-sm text-stone-200">
+                        <input id="inputArtFeatured" type="checkbox" class="w-4 h-4 accent-amber-500 rounded">
+                        <span>Trưng bày tại mục <strong>Tác phẩm tiêu biểu</strong> trang chủ</span>
+                    </label>
+                    <label class="inline-flex items-center gap-2 cursor-pointer text-xs sm:text-sm text-stone-200">
+                        <input id="inputArtAllowDownload" type="checkbox" checked class="w-4 h-4 accent-amber-500 rounded">
+                        <span>Cho phép khách truy cập tải về ảnh gốc</span>
+                    </label>
+                </div>
+
+                <div class="flex items-center justify-end gap-3 pt-4 border-t gold-border">
+                    <button id="btnCancelArtworkModal" type="button" class="px-4 py-2.5 rounded-xl border border-stone-700 text-stone-300 text-xs sm:text-sm">Hủy</button>
+                    <button id="btnSubmitArtworkForm" type="submit" class="px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-400 to-amber-600 text-stone-950 font-semibold text-xs sm:text-sm flex items-center gap-2 shadow-lg">
+                        <i data-lucide="check" class="w-4 h-4"></i>
+                        <span>Lưu Vào Thư Viện Thái Dương</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div id="toastContainer" class="fixed bottom-5 right-5 z-50 space-y-2 max-w-sm w-full pointer-events-none px-4 sm:px-0"></div>
+
+    <!-- FOOTER -->
+    <footer class="border-t gold-border py-10 mt-12 bg-stone-950/90 text-xs text-stone-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-400">
+                    <i data-lucide="sun" class="w-4 h-4"></i>
+                </div>
+                <div>
+                    <div class="font-serif-art text-base font-bold text-amber-300">THƯ VIỆN HÌNH ẢNH THÁI DƯƠNG</div>
+                    <div>© 2026 Thương hiệu THÁI DƯƠNG. Bản quyền tác phẩm nghệ thuật AI được bảo hộ.</div>
+                </div>
+            </div>
+            <div class="flex flex-wrap items-center gap-4">
+                <button type="button" data-view-target="public" data-scroll-to="gallerySection" class="hover:text-amber-300 transition">Triển Lãm</button>
+                <button type="button" data-view-target="public" data-scroll-to="servicesSection" class="hover:text-amber-300 transition">Dịch Vụ & Khóa Học AI</button>
+                <button type="button" data-view-target="architecture" class="hover:text-amber-300 transition">Kiến Trúc & Hướng Dẫn</button>
+                <button type="button" id="btnFooterAdmin" class="text-amber-400 hover:underline">Quản Trị Viên</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================
+         COMPLETE APPLICATION LOGIC
+         ========================================================== -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
