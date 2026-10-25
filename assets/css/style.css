@@ -1,0 +1,129 @@
+:root {
+            --bg-primary: #09090c;
+            --bg-secondary: #121218;
+            --bg-card: #17171f;
+            --text-primary: #f5f2eb;
+            --text-muted: #9e9aa8;
+            --gold-primary: #d4af37;
+            --gold-light: #f3e5ab;
+            --gold-dark: #aa8220;
+            --border-color: rgba(212, 175, 55, 0.22);
+        }
+
+        body.light-museum {
+            --bg-primary: #faf7f2;
+            --bg-secondary: #f0ebe1;
+            --bg-card: #ffffff;
+            --text-primary: #181619;
+            --text-muted: #5e5a66;
+            --gold-primary: #9c7416;
+            --gold-light: #b88b22;
+            --gold-dark: #78570c;
+            --border-color: rgba(156, 116, 22, 0.25);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            transition: background-color 0.4s ease, color 0.4s ease;
+            overflow-x: hidden;
+        }
+
+        .font-serif-art {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f7e9b7 0%, #d4af37 50%, #aa8220 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        body.light-museum .gold-gradient-text {
+            background: linear-gradient(135deg, #8a640f 0%, #b88b22 50%, #694b08 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-border {
+            border-color: var(--border-color);
+        }
+
+        .museum-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+
+        .museum-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.65), 0 0 25px -5px rgba(212, 175, 55, 0.18);
+            border-color: rgba(212, 175, 55, 0.55);
+        }
+
+        /* Masonry & Multi-Ratio Grid Layouts */
+        .gallery-masonry {
+            column-count: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            .gallery-masonry { column-count: 2; }
+        }
+        @media (min-width: 1024px) {
+            .gallery-masonry { column-count: 3; }
+        }
+        @media (min-width: 1280px) {
+            .gallery-masonry { column-count: 4; }
+        }
+        .gallery-masonry-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Aspect Ratio Helpers */
+        .ratio-16-9 { aspect-ratio: 16 / 9; }
+        .ratio-9-16 { aspect-ratio: 9 / 16; }
+        .ratio-1-1  { aspect-ratio: 1 / 1; }
+        .ratio-3-4  { aspect-ratio: 3 / 4; }
+        .ratio-4-3  { aspect-ratio: 4 / 3; }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-primary);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.35);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(212, 175, 55, 0.65);
+        }
+
+        /* Smooth Lightbox Zoom */
+        #lightboxImage {
+            transition: transform 0.25s ease-out;
+            transform-origin: center center;
+        }
+
+        .glass-panel {
+            background: rgba(18, 18, 24, 0.84);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+
+        body.light-museum .glass-panel {
+            background: rgba(250, 247, 242, 0.88);
+        }
+
+        @keyframes pulseSlow {
+            0%, 100% { opacity: 0.35; transform: scale(1); }
+            50% { opacity: 0.65; transform: scale(1.03); }
+        }
+        .ambient-glow {
+            animation: pulseSlow 8s infinite ease-in-out;
+        }

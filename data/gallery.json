@@ -1,0 +1,52 @@
+{
+  "brand": "THÁI DƯƠNG",
+  "galleryName": "THƯ VIỆN HÌNH ẢNH THÁI DƯƠNG",
+  "updatedAt": "2026-10-25",
+  "storageMode": "Cloudinary CDN + GitHub Pages JSON",
+  "artworks": [
+    {
+      "id": "td-art-01",
+      "title": "Nàng Thơ Áo Dài Tinh Tú & Ngọc Trai",
+      "category": "chan-dung",
+      "aspectRatio": "9:16",
+      "collection": "Tuyển Tập Ánh Dương 2026",
+      "createdAt": "2026-10-20",
+      "description": "Chân dung nghệ thuật AI khắc họa vẻ đẹp thanh tao của người phụ nữ Việt trong tà áo dài lụa dệt ánh sao vàng và ngọc trai.",
+      "keywords": [
+        "chân dung nghệ thuật",
+        "áo dài",
+        "nàng thơ",
+        "ánh sáng bảo tàng",
+        "thái dương"
+      ],
+      "imageUrl": "assets/images/chan-dung-nang-tho-ao-dai.jpg",
+      "thumbUrl": "assets/images/chan-dung-nang-tho-ao-dai.jpg",
+      "featured": true,
+      "allowDownload": true,
+      "views": 1420,
+      "order": 1
+    },
+    {
+      "id": "td-art-02",
+      "title": "Đêm Ngân Hà & Hoa Đăng Vịnh Hạ Long",
+      "category": "phong-canh",
+      "aspectRatio": "16:9",
+      "collection": "Di Sản Thiên Nhiên Kỳ Vĩ",
+      "createdAt": "2026-10-18",
+      "description": "Toàn cảnh Vịnh Hạ Long huyền ảo dưới dải Ngân Hà tím biếc, mặt nước ngọc lục bảo phát quang cùng hàng ngàn đèn hoa đăng.",
+      "keywords": [
+        "phong cảnh",
+        "vịnh hạ long",
+        "ngân hà",
+        "hoa đăng",
+        "16:9"
+      ],
+      "imageUrl": "assets/images/phong-canh-vinh-ha-long.jpg",
+      "thumbUrl": "assets/images/phong-canh-vinh-ha-long.jpg",
+      "featured": true,
+      "allowDownload": true,
+      "views": 1890,
+      "order": 2
+    }
+  ]
+}
